@@ -1,0 +1,150 @@
+/* ================================
+   BASE STYLES
+=============================== */
+
+/* Pastel Palette */
+:root {
+    --white: #ffffff;
+    --black: #111111;
+    --light-gray: #f8f8f8;
+    --grey-border: #e5e5e5;
+    --baby-pink: #ffe4e1;
+    --baby-blue: #e0f7ff;
+    --mint-green: #e0ffe0;
+}
+
+/* Global Reset + Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.7;
+}
+
+/* ================================
+   CENTERED CONTAINER
+=============================== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+/* ================================
+   HEADER
+=============================== */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--grey-border);
+}
+
+header h1 {
+    font-weight: 300;
+    font-size: 3em;
+    letter-spacing: 1px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 28px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1em;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    color: var(--baby-blue);
+}
+
+/* ================================
+   SECTION STYLES
+=============================== */
+section {
+    margin-top: 60px;
+    padding: 40px 25px;
+    background-color: var(--light-gray);
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid var(--baby-pink);
+    transition: border-left 0.3s ease;
+}
+
+section:nth-child(odd) {
+    border-left: 6px solid var(--baby-blue);
+}
+section:nth-child(even) {
+    border-left: 6px solid var(--mint-green);
+}
+
+section h2 {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.05em;
+    color: #333;
+    margin-top: 12px;
+}
+
+/* ================================
+   PORTFOLIO PROJECT CARDS
+=============================== */
+#projects p {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* ================================
+   FOOTER
+=============================== */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 0.95em;
+    color: #555;
+    border-top: 1px solid var(--grey-border);
+}
+
+footer p {
+    opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVENESS
+=============================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    section {
+        padding: 30px 15px;
+        margin-top: 30px;
+    }
+}
